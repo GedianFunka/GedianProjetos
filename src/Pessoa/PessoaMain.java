@@ -28,6 +28,11 @@ public class PessoaMain {
 	System.out.println("Digite seu cpf: ");
 	String cpf = s.nextLine();
 	
+	
+	Pessoa p1 = new Pessoa(nome, idade, cpf);
+	
+	System.out.println(p1.getNome());
+	
 	s.close();	
 		
 	}
