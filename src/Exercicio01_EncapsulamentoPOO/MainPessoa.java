@@ -6,7 +6,7 @@ public class MainPessoa {
 		
 	Pessoas p1 = new Pessoas("Gedian", 16);
 	
-	p1.apresentar();
+	p1.Apresentar();
 		
 	}
 

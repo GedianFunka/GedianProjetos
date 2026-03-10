@@ -28,7 +28,7 @@ public class Pessoas {
 		this.idade = idade;
 	}
 	
-	void apresentar() {
+	void Apresentar() {
 		System.out.println("Olá, meu nome é " + nome +  " e tenho " + idade + " anos.");
 		
 	}
