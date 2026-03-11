@@ -38,7 +38,7 @@ public class Produto {
 		this.quantidade = quantidade;
 	}
 	
-	void ExibirProfuto() {
+	void ExibirProduto() {
 		System.out.println("O produto " + nome + " tem o preço de R$" + preco + " e a quantidade dele é de " + quantidade);
 	}
 	

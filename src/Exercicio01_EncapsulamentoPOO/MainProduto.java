@@ -8,7 +8,7 @@ public class MainProduto {
 	
 	p1.setPreco(15.50);
 	
-	p1.ExibirProfuto();
+	p1.ExibirProduto();
 		
 	}
 
