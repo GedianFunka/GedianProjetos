@@ -39,5 +39,7 @@ public class ListaNome_POO_ArrayList_e_DoWhile {
 			System.out.println("Nome não encontrado");
 		}
 	}
-	
+	public boolean listaVazia() {
+        return nomes.isEmpty();
+    }
 }
