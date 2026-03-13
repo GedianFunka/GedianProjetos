@@ -37,7 +37,7 @@ public class SistemaProduto {
 	}
 	
 	public void ExibirDados() {
-		System.out.println("O produto" + nome + " está com o preço de " + preco + " e sua quantidade em estoque é: " + quantidade + "\n");
+		System.out.println("O produto " + nome + " está com o preço de " + preco + " e sua quantidade em estoque é: " + quantidade + "\n");
 		
 	}
 }
