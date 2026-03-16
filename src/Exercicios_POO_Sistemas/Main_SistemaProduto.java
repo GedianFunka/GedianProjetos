@@ -61,8 +61,10 @@ public class Main_SistemaProduto {
 				
 			case 0 :
 				System.out.println("SAINDOOO ..........");
-				
 				break;
+				
+				default:
+					System.out.println("Opção inválida");
 			
 			}
 			

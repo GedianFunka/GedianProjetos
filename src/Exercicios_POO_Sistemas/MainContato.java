@@ -98,6 +98,14 @@ public class MainContato {
 				System.out.println("O indíce é inválido na lista de contatos");
 			}
 			
+		case 0 :
+			
+			System.out.println("Saindo.................");
+			break;
+			
+			default:
+				System.out.println("Opcão inválida");
+			
 		}
 	
 	}while(opcao != 0);
