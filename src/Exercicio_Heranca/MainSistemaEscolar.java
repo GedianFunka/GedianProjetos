@@ -26,7 +26,7 @@ public class MainSistemaEscolar {
 			switch (opcao) {
 			
 			case 1 : 
-				System.out.println("--Cadastrando Aluno--");
+				System.out.println("--Cadastrando Aluno--\n");
 				System.out.println("Nome: ");
 				String nome = s.nextLine();
 				
@@ -35,6 +35,7 @@ public class MainSistemaEscolar {
 				
 				System.out.println("Idade: ");
 				int idade = s.nextInt();
+				s.nextLine();
 				
 				System.out.println("Matrícula: ");
 				String matricula = s.nextLine();
@@ -43,6 +44,7 @@ public class MainSistemaEscolar {
 				String curso = s.nextLine();
 				
 				Aluno a1 = new Aluno(nome, CPF, idade, matricula, curso);
+				p.add(a1);
 				
 				break;
 				
@@ -56,6 +58,7 @@ public class MainSistemaEscolar {
 				
 				System.out.println("Idade: ");
 				idade = s.nextInt();
+				s.nextLine();
 				
 				System.out.println("Disciplina: ");
 				String disciplina = s.nextLine();
@@ -64,6 +67,7 @@ public class MainSistemaEscolar {
 				double salario = s.nextDouble();
 				
 				Professor p1 = new Professor(nome, CPF, idade, disciplina, salario);
+				p.add(p1);
 				
 				break;
 				
@@ -71,8 +75,10 @@ public class MainSistemaEscolar {
 				if(p.isEmpty()) {
 					System.out.println("Não há cadastros de alunos ou professores");
 				}else {
-					System.out.println("--Listando professores e alunos---");
-					
+					System.out.println("\n--Listando professores e alunos---");
+					for(Pessoa listando : p) {
+						listando.ExibirDados();
+					}
 				
 				
 			}
