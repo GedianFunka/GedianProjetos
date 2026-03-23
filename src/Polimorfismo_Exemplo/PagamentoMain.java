@@ -68,6 +68,8 @@ public class PagamentoMain {
 				pp.calcularTaxa();
 				pagamentos.add(pp);
 				
+				break;
+				
 			case 3 :
 				System.out.println("Pagamento com boleto");
 				System.out.println("Titular: ");
@@ -86,15 +88,54 @@ public class PagamentoMain {
 				pb.processarPagamento();
 				pb.calcularTaxa();
 				pagamentos.add(pb);
-			
-			case 4 :
 				
+				break;
 				
-			}
-			
+			case 4: // Listar todos
+                if (pagamentos.isEmpty()) {
+                    System.out.println("\nNenhum pagamento realizado ainda!");
+                } else {
+                    System.out.println("\n═══ TODOS OS PAGAMENTOS ═══");
+                    for (int i = 0; i < pagamentos.size(); i++) {
+                        System.out.println("\n--- Pagamento #" + (i + 1) + " ---");
+                        // POLIMORFISMO EM AÇÃO!
+                        // Cada objeto chama SUA versão do método!
+                        pagamentos.get(i).processarPagamento();
+                    }
+                }
+                break;
+            
+            case 5: // Total de taxas
+                if (pagamentos.isEmpty()) {
+                    System.out.println("\nNenhum pagamento realizado ainda!");
+                } else {
+                    double totalTaxas = 0;
+                    System.out.println("\n═══ TAXAS POR PAGAMENTO ═══");
+                    for (int i = 0; i < pagamentos.size(); i++) {
+                        // POLIMORFISMO EM AÇÃO!
+                        // Cada classe calcula sua taxa de forma diferente!
+                        double taxa = pagamentos.get(i).calcularTaxa();
+                        totalTaxas += taxa;
+                        System.out.println("Pagamento #" + (i + 1) + ": R$ " + 
+                                         String.format("%.2f", taxa));
+                    }
+                    System.out.println("\nTOTAL DE TAXAS: R$ " + 
+                                     String.format("%.2f", totalTaxas));
+                }
+                break;
+            
+            case 0:
+               
+                System.out.println("Sistema encerrado!");
+                break;
+            
+            default:
+                System.out.println("\nOpção inválida! Tente novamente.");
+        }
 				
-			
 		}while(opcao != 0);
+		
+		s.close();
 		
 	}
 
