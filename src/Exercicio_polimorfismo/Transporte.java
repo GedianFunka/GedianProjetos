@@ -32,7 +32,7 @@ public class Transporte {
 	}
 	
 	public void exibirDetalhes() {
-		System.out.println("Distancia " + distancia);
+		System.out.println("Distancia " + distancia + " KM");
 		System.out.println("Quantidade de passageiros: " + passageiros);
 		
 	}
