@@ -20,6 +20,7 @@ public class MainTransporte {
 			System.out.println("4. Listar todos os transportes");
 			System.out.println("5. Calcular custos total");
 			System.out.println("0. Sair...........");
+			System.out.println("\nEscolha a opção: ");
 			
 			opcao = s.nextInt();
 			s.nextLine();
