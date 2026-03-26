@@ -8,7 +8,7 @@ public class AnimalMain {
 		
 		Exemplo_Animal g = new Gato ("Garfield");
 		
-		c.emitirSom();
+		c.emitirSom(); // Cada um responde diferente
 		g.emitirSom();
 		c.dormir();
 		g.dormir();
