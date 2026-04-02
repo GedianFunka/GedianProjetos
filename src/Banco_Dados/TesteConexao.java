@@ -14,8 +14,8 @@ package Banco_Dados;
  );
 				System.out.println("Conectado com sucesso!");
 
-} catch (Exception e) {
-	System.out.println("Erro: " + e.getMessage());
+			} catch (Exception e) {
+				System.out.println("Erro: " + e.getMessage());
  }
  }
 }
