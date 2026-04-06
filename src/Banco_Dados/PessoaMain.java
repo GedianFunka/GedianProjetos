@@ -14,11 +14,22 @@ public class PessoaMain {
 			
 			System.out.println("Informe sua idade: ");
 			int idadeDig = s.nextInt();
+			s.nextLine();
 			
-			Pessoas natalino = new Pessoas (nomeDig, idadeDig);
+			System.out.println("Digite seu CPF: ");
+			String cpfDig = s.nextLine();
+			
+			Pessoas natalino = new Pessoas (nomeDig, idadeDig, cpfDig);
 			
 			PessoaDAO natalinoDAO = new PessoaDAO();
 			natalinoDAO.inserir(natalino);
+			
+			//Leitura de banco de dados
+			List<Pessoas> lista = natalinoDAO.listar();
+			
+			for(Pessoas p : lista) {
+				System.out.println(p);
+			}
 			
 		}catch(Exception e){
 			System.out.println("Erro no banco: " + e.getMessage());

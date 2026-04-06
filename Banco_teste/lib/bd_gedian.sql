@@ -8,4 +8,7 @@ create table pessoas (
 	idade int not null
 );
 
+alter table pessoas
+add cpf varchar(20) not null;
+
 select * from pessoas;
