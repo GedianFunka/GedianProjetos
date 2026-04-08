@@ -8,7 +8,7 @@ package Banco_Dados;
 			try {
 				Connection conn = DriverManager.getConnection(
 
-						"jdbc:mysql://localhost:3306/teste_java?useSSL=false&serverTimezone=UTC",
+						"jdbc:mysql://localhost:3306/cadastro_produto?useSSL=false&serverTimezone=UTC",
 						"root",
 						"root"
  );
