@@ -23,7 +23,7 @@ public class Vendedor extends Funcionario{
 
 	@Override
 	public String toString() {
-		return "Vendedor: comissao = " + comissao + "\n";
+		return super.toString() + "Vendedor: comissao = " + String.format("%.2f", comissao) + "\n" + "Salario total = " + String.format("%.2f", calcularSalario());
 	}
 	
 }

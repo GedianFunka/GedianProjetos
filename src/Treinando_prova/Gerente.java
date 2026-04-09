@@ -15,7 +15,7 @@ public class Gerente extends Funcionario{
 
 	@Override
 	public String toString() {
-		return "Gerente: bonus = " + bonus + "\n";
+		return super.toString() + "Gerente: bonus = " + String.format("%.2f", bonus) + "\n" + "Salario total: " + String.format("%.2f", calcularSalario()) ;
 	}
 	
 	

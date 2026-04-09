@@ -45,7 +45,7 @@ public class FuncionarioMain {
 					
 					Funcionario fg = new Gerente(nome, idade, salarioBase, bonus);
 					fg.calcularSalario();
-					fg.toString();
+					System.out.println(fg);
 					f.add(fg);
 					
 				}catch(Exception e) {
@@ -73,7 +73,7 @@ public class FuncionarioMain {
 					Funcionario fv = new Vendedor(nome, idade, salarioBase, comissao);
 					
 					fv.calcularSalario();
-					fv.toString();
+					System.out.println(fv);
 					f.add(fv);
 					
 				}catch(Exception e) {
@@ -101,7 +101,7 @@ public class FuncionarioMain {
 					Funcionario fe = new Estagiario(nome, idade, salarioBase, horasTrabalhadas);
 					
 					fe.calcularSalario();
-					fe.toString();
+					System.out.println(fe);
 					f.add(fe);
 					
 				}catch(Exception e) {
@@ -121,7 +121,7 @@ public class FuncionarioMain {
 					
 					for(Funcionario listar : f) {
 						System.out.println("\n");
-						listar.toString();
+						System.out.println(listar);;
 					}
 				}
 					
@@ -144,7 +144,7 @@ public class FuncionarioMain {
 						double salario = pg.calcularSalario();
 						totalSalario += salario;
 						}
-						System.out.println(String.format("%.2f", totalSalario));
+						System.out.println("R$" + String.format("%.2f", totalSalario) + "\n");
 					}
 					
 				}catch(Exception e) {
@@ -161,8 +161,6 @@ public class FuncionarioMain {
 					System.out.println("Erro: " + e.getMessage());
 				}
 				
-				default:
-					System.out.println("Opção inválida\n");
 				}
 			
 			

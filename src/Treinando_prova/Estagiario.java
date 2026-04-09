@@ -23,7 +23,7 @@ public class Estagiario extends Funcionario{
 
 	@Override
 	public String toString() {
-		return "Estagiario: horasTrabalhadas = " + horasTrabalhadas + "\n";
+		return super.toString() + "Estagiario: horasTrabalhadas = " + horasTrabalhadas + "\n" + "Salario total = " + String.format("%.2f", calcularSalario());
 	}
 	
 }

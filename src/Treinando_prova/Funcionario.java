@@ -40,6 +40,6 @@ public abstract class Funcionario {
 
 	@Override
 	public String toString() {
-		return "Funcionario: nome = " + nome + ", idade = " + idade + ", salarioBase = " + salarioBase + "\n";
+		return "Funcionario:\nnome = " + nome + "\nidade = " + idade + "\nsalarioBase = " + String.format("%.2f", getSalarioBase()) + "\n";
 	}
 }
