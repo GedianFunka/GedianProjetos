@@ -37,11 +37,12 @@ public class GameDAO {
 			
 			while(rs.next()) {
 				lista.add(new Game(
+						rs.getInt("id"),
 						rs.getString("titulo"),
 						rs.getString("plataforma"),
 						rs.getString("genero"),
-						rs.getInt("anoLancanmento"),
-						rs.getInt("precoAluguel")
+						rs.getInt("anoLancamento"),
+						rs.getDouble("precoAluguel")
 						));
 			}
 			

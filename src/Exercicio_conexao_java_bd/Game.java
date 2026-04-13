@@ -76,7 +76,7 @@ public class Game {
 
 	@Override
 	public String toString() {
-		return "Game: \nid = " + id + "\ntitulo = " + titulo + "\nplataforma = " + plataforma + "\ngenero = " + genero
-				+ "\nanoLancamento = " + anoLancamento + "\nprecoAluguel = " + precoAluguel + "]";
+		return "\nGame: \nid = " + id + "\ntitulo = " + titulo + "\nplataforma = " + plataforma + "\ngenero = " + genero
+				+ "\nanoLancamento = " + anoLancamento + "\nprecoAluguel = " + precoAluguel + "\n";
 	}
 }
