@@ -10,7 +10,7 @@ import java.util.List;
 
 public class PessoaDAO {
 
-	//create
+	//create (criando as pessoas)
 	public void inserir(Pessoas p) throws SQLException{
 		String sql = "INSERT INTO pessoas(nome, idade, cpf) VALUES(?, ?, ?)";
 		//try com recursos
@@ -26,7 +26,7 @@ public class PessoaDAO {
 		}
 	}
 
-//Listar todas as pessoas
+//Listar todas as pessoas 
 	public List<Pessoas> listar() throws SQLException{
 		List<Pessoas> lista = new ArrayList<>();
 		String sql = "SELECT * FROM pessoas";
@@ -46,6 +46,39 @@ public class PessoaDAO {
 		
 	return lista;
 	
+		}
+	}
+	
+	//Update(atualizando) nome, idade e cpf pelo ID
+	
+	public void atualizar(Pessoas p) throws SQLException{
+		String sql = "UPDATE Pessoas SET nome = ?, idade = ?, cpf = ? WHERE id = ? ";
+		
+		try(Connection conn = Conexao.conectar();
+				PreparedStatement stmt = conn.prepareStatement(sql)){
+			
+			stmt.setString(1, p.getNome());
+			stmt.setInt(2, p.getIdade());
+			stmt.setString(3, p.getCpf());
+			stmt.setInt(4, p.getId());
+
+			stmt.executeUpdate();
+			System.out.println("Dados atualizados");
+			
+			}
+	}
+	
+	//Delete (Deletando) através do ID
+	public void excluir(int id) throws SQLException{
+		String sql = "DELETE from Pessoas WHERE id = ?";
+		
+		try(Connection conn = Conexao.conectar();
+				PreparedStatement stmt = conn.prepareStatement(sql)){
+			
+			stmt.setInt(1, id);
+			
+			stmt.executeUpdate();
+			System.out.println("Dados excluidos");
 		}
 	}
 }
