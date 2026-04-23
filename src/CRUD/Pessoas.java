@@ -1,4 +1,4 @@
-package Banco_Dados;
+package CRUD;
 
 public class Pessoas {
 
