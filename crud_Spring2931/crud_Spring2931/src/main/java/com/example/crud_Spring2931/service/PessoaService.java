@@ -27,7 +27,7 @@ public class PessoaService {
     }
 
     //create
-    public Pessoa salvar(Pessoa pessoa{
+    public Pessoa salvar(Pessoa pessoa){
         return repository.save(pessoa);
     }
 
