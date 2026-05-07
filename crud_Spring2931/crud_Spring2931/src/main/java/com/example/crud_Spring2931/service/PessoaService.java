@@ -1,6 +1,6 @@
 package com.example.crud_Spring2931.service;
 
-import com.example.crud_Spring2931.model.Pessoa;
+import com.example.crud_Spring2931.model.PessoaModel;
 import com.example.crud_Spring2931.repository.PessoaRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -15,25 +15,25 @@ public class PessoaService {
     private final PessoaRepository repository;
     //Read
 
-    public List<Pessoa> listar(){
+    public List<PessoaModel> listar(){
         return repository.findAll();
     }
 
     //read buscar por id
 
-    public Pessoa buscarPorId(long id){
+    public PessoaModel buscarPorId(long id){
         return repository.findById(id)
                 .orElseThrow(()-> new RuntimeException("Pessoa não encontrada."));
     }
 
     //create
-    public Pessoa salvar(Pessoa pessoa){
+    public PessoaModel salvar(PessoaModel pessoa){
         return repository.save(pessoa);
     }
 
     //update
-    public Pessoa atualizar(Long id, Pessoa dados){
-        Pessoa pessoa = buscarPorId(id);
+    public PessoaModel atualizar(Long id, PessoaModel dados){
+        PessoaModel pessoa = buscarPorId(id);
         pessoa.setNome(dados.getNome());
         pessoa.setIdade(dados.getIdade());
         return repository.save(pessoa);
